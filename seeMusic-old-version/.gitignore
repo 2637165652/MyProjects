@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+build/*
+!build/app.js
+!build/package.json
+npm-debug.log
+.idea
+.DS_Store?
