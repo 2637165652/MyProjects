@@ -40,6 +40,14 @@ app.post('/login', (req, res) => {
   res.json(response)
 })
 
+app.get('/test', (req, res) => {
+
+  var response = {
+    id: '1'
+  }
+  res.json(response)
+})
+
 app.listen(8888, function () {
   console.log('Your app is running at http://127.0.0.1:8888')
 })

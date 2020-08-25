@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { getUser, login } from '../api/index'
+import { getUser, login, test } from '../api/index'
 export default {
   name: 'HelloWorld',
   data () {
@@ -17,6 +17,13 @@ export default {
       name: '',
       age: 15
     }
+  },
+  created () {
+    test('huang').then(res => {
+      console.log(typeof res.data.id, res.data.id + 1)
+      this.id = parseInt(res.data.id) + 1
+      console.log(this.id)
+    }).catch(() => {})
   },
   methods: {
     query () {

@@ -18,7 +18,7 @@ export function getUser (id, name = 'li', age = 18) {
 }
 
 /**
- * 审核用户
+ *
  * @param {string} name
  * @param {string} password
  */
@@ -30,5 +30,17 @@ export function login (name, password) {
       name,
       password
     }
+  })
+}
+
+/**
+ *
+ * @param {string} name
+ * @param {string} password
+ */
+export function test () {
+  return axios({
+    url: '/test',
+    method: 'get'
   })
 }
