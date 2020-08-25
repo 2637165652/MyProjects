@@ -23,28 +23,18 @@ app.use(function (req, res, next) {
 app.get('/user', function (req, res) {
   console.log(req.query)
 
-  // var response = {
-  //   id: 5,
-  //   name: 'huang',
-  //   age: 12
-  // }
-
-  /* 返回的数据response即为客户端接收的res.data，且数据类型不变，response可为object、string、Number等  */
-  // res.send(response)
-
-  // 作用同res.send()
   res.json({
     // 加不加单引号都可以，也可以把一个对象代替整个{}
-    'id': req.query.id || 15,
-    name: req.query.name || 'Libin',
-    'age': 12
+    'id': req.query.id || '',
+    name: req.query.name || '',
+    age: req.query.age || ''
   })
 
   // res.end(JSON.stringify(response)) /* 客户端接收的数据是对象类型 */
 })
 
-app.post('/post', (req, res) => {
-  console.log(typeof req.body, req.body.age)
+app.post('/login', (req, res) => {
+  console.log(typeof req.body, req.body)
 
   var response = req.body
   res.json(response)
