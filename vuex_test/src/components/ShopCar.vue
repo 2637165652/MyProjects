@@ -1,5 +1,5 @@
 <template>
-  <div id=shopcar>
+  <div id=shopcar class="over-tabbar">
     <div>我是购物车</div>
     <div>我是购物车</div>
     <div>我是购物车</div>
@@ -9,13 +9,12 @@
     <div>我是购物车</div>
     <div>我是购物车</div>
     <div>我是购物车</div>
-    <div>我是购物车</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
     <div>我是购物车</div>
     <div>我是购物车</div>
     <div>我是购物车</div>
-
-    <div>我是购物车</div>
+    <!-- 子路由需完整，包括父路由 -->
+    <router-link to="/shopcar/goods">子路由</router-link>
+    <router-view/>
   </div>
 </template>
 
@@ -26,6 +25,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#shopcar
-  margin-bottom 70px
+
 </style>

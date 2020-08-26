@@ -11,10 +11,17 @@ export default {
   name: 'App',
   data () {
     return {
+      msg: 88
     }
   },
   components: {
     TabBar
+  },
+  created () {
+    var test = this.msg || 'bb'
+    console.log(this.msg1, test)
+  },
+  methods: {
   }
 }
 </script>

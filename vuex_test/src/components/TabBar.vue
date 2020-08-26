@@ -26,7 +26,7 @@ export default {
   name: 'TabBar',
   data () {
     return {
-      selected: '发现'
+      selected: '购物车'
     }
   }
 
