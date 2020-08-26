@@ -43,7 +43,7 @@ app.post('/login', (req, res) => {
 app.get('/test', (req, res) => {
 
   var response = {
-    id: 1
+    id: '1'
   }
   res.json(response)
 })
