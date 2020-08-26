@@ -1,0 +1,138 @@
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.userinfo, .item {
+  margin-top: 20rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo {
+  padding-left: 120rpx;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 10%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar[size] {
+  width: 100rpx;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 38rpx;
+  color: black;
+  background-color: white;
+  background-size: cover;
+  text-align: left;
+  padding-left: 20rpx;
+  margin-left: 20px;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+ .userinfo-nickname-wrapper {
+  flex: 1;
+}
+
+.unlogin.btn {
+  font-size: 34rpx;
+  font-weight: normal;
+  color: #06ae56;
+  background-color: #fff;
+  margin-left: 0rpx;
+  /* border: 1px red solid; */
+}
+.btn::after {
+  border: none;
+}
+.item{
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.item-text {
+  width: 100%;
+  line-height: 1.5;
+  font-size: 34rpx;
+  text-indent: 1rem;
+  /* color: #007aff; */
+}
+
+.join-us{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.group:active{
+  background-color: #DCDCDC;
+}
+.next-title{
+  color:#00BFFF;
+  padding-left:20rpx;
+}
+.nextIcon{
+  flex:1;
+  text-align: right;
+  font-size: 28rpx;
+  color:#00BFFF;
+  margin-right: 50rpx;
+}
+
+.block{
+    background-color: #fff;
+    margin-top: 20rpx;
+    width:100%;
+  }
+  .block-title{
+    position: relative;
+    font-size: 34rpx;
+    line-height: 1.5;
+    color: #00BFFF;
+    padding: 10rpx 20rpx;
+    text-indent: 1rem;  /*缩进 */
+  }
+  .block-title::after{
+    position: absolute;
+    left: 20rpx;
+    top: 10rpx;
+    content: "";
+    width: 12rpx;
+    height: 40rpx;
+    background: #00BFFF;
+  }
+  .block-desc{
+    display: block;
+    color: #666;
+    line-height: 1.5;
+    font-size: 30rpx;
+    padding: 0 30rpx 30rpx;
+    text-indent: 1rem;  
+  }
+  

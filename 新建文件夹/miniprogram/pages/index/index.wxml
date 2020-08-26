@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="header weight">《海贼王(航海王)》在线观看!</view> -->
+  <image class="banner" src='{{index_page.posterUrl}}'></image>
+  <view class="introduction weight">
+    <view class="" style="font-size:34rpx;margin:20rpx 0 5rpx;">{{index_page.introduction_title}}</view>
+    <view style="margin: 15rpx;" wx:if="{{watcher.showVisitTotal}}">访问量：{{watcher.visitTotal}}</view>
+    <!-- 简介：拥有财富、名声、权力，这世界上一切的男人海贼王哥尔·D·罗杰，在临刑前说了一句话，让全世界的人都涌向了大海。
+    “想要我的宝藏吗？如果想要的话，那就到海上去找吧，我全部都放在那里了！”。于是，世界开始迎来“大海贼时代” 。
+    其中，有一个梦想成为海贼王的少年，蒙奇·D·路飞开启了他的传奇航海之旅...... -->
+    {{index_page.introduction}}
+  </view>
+  <view class="txt">
+    {{index_page.share_title}}
+  </view>
+  <view class="url weight">
+    <button type="primary" wx:for="{{netUrls}}" wx:key="index" bindtap="showDialog" data-url="{{item}}">{{item.text}}</button>
+    <!-- <button type="primary" bindtap="showDialog" data-url="{{netUrls[1]}}">网盘备用1</button>
+    <button type="primary" bindtap="showDialog" data-url="{{netUrls[2]}}">网盘备用2</button> -->
+  </view>
+
+  <view class='block' wx:if="{{index_page.show_block}}">
+    <view class='block-title'>{{index_page.block_title}}</view>
+    <text class='block-desc'>{{index_page.block_desc}}</text>
+  </view>
+</view>
