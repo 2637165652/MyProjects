@@ -1,4 +1,4 @@
-# test_axios
+# vuex_test
 
 > A Vue.js project
 
