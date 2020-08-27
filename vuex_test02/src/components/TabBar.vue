@@ -11,7 +11,7 @@
       </mt-tab-item>
       <mt-tab-item id="shopcar">
         <img slot="icon" src="@/images/cart.png">
-        <mt-badge size="small" type="error">2</mt-badge>
+        <mt-badge size="small" type="error">{{ $store.state.num }}</mt-badge>
         购物车
       </mt-tab-item>
       <mt-tab-item id="user">

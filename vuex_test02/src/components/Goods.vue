@@ -12,7 +12,18 @@ export default {
   name: 'Goods',
   data () {
     return {
-      num: 0
+      num1: 0
+    }
+  },
+  computed: {
+    num: {
+      // console.log(this.$store.state.num)
+      get: function () {
+        return this.$store.state.num
+      },
+      set: function (newV) {
+        this.$store.commit('setValue', newV)
+      }
     }
   },
   created () {
