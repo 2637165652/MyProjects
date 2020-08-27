@@ -1,0 +1,49 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{isLogined}}">
+      <button
+        class="userinfo-avatar"
+        style="background-image: url({{userInfo.avatarUrl}})"
+        size="default"
+      ></button>
+      <view class="userinfo-nickname-wrapper">
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <button
+        class="userinfo-avatar"
+        style="background-image: url({{unloginImage}})"
+        size="default"
+      ></button>
+      <view class="userinfo-nickname-wrapper">
+        <button class='unlogin btn' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">点击登录</button>
+        <!-- <text class="login" style="color:blue; margin-left:40rpx;">点击登录</text> -->
+      </view>
+    </block>
+    
+  </view>
+  
+  <!-- <view class="item" style="padding:30rpx 0;">
+    <view class="item-text" style="font-size:30rpx;">{{user_page.signature}}</view>
+  </view> -->
+  <view class='block signnature' style="padding-top:30rpx; color:">
+    <text class='block-desc'>{{user_page.signature}}</text>
+  </view>
+  <view class="item group" style="padding:30rpx 0;" bindtap="moreDetails" wx:if="{{user_page.show_group}}">
+    <view class="item-text join-us">
+      <view class="next-title">海贼王大部落</view>
+      <view class="nextIcon" >{{'>>'}}</view>
+    </view>
+  </view>
+  <view class='block'>
+    <view class='block-title'>关于小程序</view>
+    <text class='block-desc'>{{user_page.about1}}</text>
+    <text class='block-desc'>{{user_page.about2}}</text>
+  </view>
+  <view class='block'>
+    <view class='block-title'>其他</view>
+    <text class='block-desc'>{{user_page.other}}</text>
+  </view>
+</view>
