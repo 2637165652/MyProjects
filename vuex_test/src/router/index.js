@@ -11,7 +11,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/shopcar'
+      redirect: '/index'
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: Goods
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: Search
     },
     {
       path: '/shopcar',
@@ -23,21 +33,6 @@ export default new Router({
           component: Goods
         }
       ]
-    },
-    {
-      path: '/goods',
-      name: 'goods',
-      component: Goods
-    },
-    {
-      path: '/search',
-      name: 'search',
-      component: Search
-    },
-    {
-      path: '/search',
-      name: 'search',
-      component: Search
     },
     {
       path: '/user',

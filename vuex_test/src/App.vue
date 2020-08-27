@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+    <Header title="迷你小商城"></Header>
     <router-view/>
     <tab-bar></tab-bar>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
 import TabBar from '@/components/TabBar'
 export default {
   name: 'App',
@@ -15,11 +17,12 @@ export default {
     }
   },
   components: {
-    TabBar
+    TabBar,
+    Header
   },
   created () {
-    var test = this.msg || 'bb'
-    console.log(this.msg1, test)
+    // var test = this.msg || 'bb'
+    // console.log(this.msg1, test)
   },
   methods: {
   }
@@ -33,6 +36,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-bottom: 20px; */
+}
+body{
+  margin: 0px;
 }
 </style>
