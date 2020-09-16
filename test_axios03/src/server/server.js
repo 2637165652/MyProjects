@@ -2,6 +2,7 @@ var express = require('express')
 var app = express()
 var request = require('request')
 var bodyParser = require('body-parser')
+const axios = request('axios')
 // var multer = require('multer')
 // var upload = multer() // for parsing multipart/form-data 上传文件
 app.use(bodyParser.json()) // for parsing application/json
@@ -51,13 +52,15 @@ app.post('/post', (req, res) => {
   }
   res.json(response)
 })
-app.get('/requestApi', (req, res) => {
+app.get('/requestApi', (req, res1) => {
   console.log('test')
-  request.post({url: 'http://route.showapi.com/1467-1',
-    form: {
-    }}, function (error, response, body) {
-    console.log(error, response, body)
-    res.send(response)
+  axios({
+    url: 'http://route.showapi.com/1467-1',
+    method: 'post'
+  }).then(res2 => {
+    res1.send(res2)
+  }).catch(err => {
+    console.log(err)
   })
 })
 
